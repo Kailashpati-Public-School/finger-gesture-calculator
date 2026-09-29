@@ -1,0 +1,16 @@
+# --- Web app ---
+streamlit>=1.40
+streamlit-webrtc>=0.60      # browser camera -> Python (works on a deployed server)
+av                          # video frames used by streamlit-webrtc
+
+# --- Hand tracking ---
+# IMPORTANT: keep mediapipe pinned. Newer releases removed the classic
+# `mp.solutions.hands` API that this project uses.
+mediapipe==0.10.21          # also installs opencv-contrib-python (cv2) and numpy<2
+numpy<2
+
+# --- Gesture guide picture ---
+pillow
+
+# --- Tests (optional) ---
+pytest
